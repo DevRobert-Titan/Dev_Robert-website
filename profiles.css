@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Move to new row if no space */
+  gap: 15px; /* Space between profiles */
+  width: 90%; /* Responsive width */
+  max-width: 1000px; /* Never get too wide */
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* Each Profile Box */
+.profile {
+  flex-grow: 1;  /* Expand to fill space */
+  flex-shrink: 1; /* Shrink when needed */
+  flex-basis: 200px; /* Default size */
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect */
+.profile:hover {
+  transform: scale(1.05); /* Slightly bigger when hovered */
+  background: skyblue;
+}
+
+/* On Small Screens */
+@media (max-width: 600px) {
+  .profile {
+      flex-basis: 100%; /* Each profile takes full width */
+  }
+}

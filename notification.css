@@ -1,0 +1,83 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(136, 132, 132, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+  .container{
+  height: 200px;
+  width: 400px;
+  padding: 30px;
+  position: absolute;
+  top: 1px;
+}
+
+.bar-1, .bar-2, .bar-3 {
+  width: 350px;
+  background: #3b3939;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+.bar:hover {
+  background: #444;
+}
+
+.bar-2:hover {
+  background: #444;
+}
+
+.bell {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: all ease-in-out 0.3s;
+}
+.bell:hover{
+  transform: scale(1.1);
+}
+
+.message {
+  flex-grow: 1;
+  font-size: 17px;
+}
+
+.close-btn-1, .close-btn-2, .close-btn-3 {
+  width: 15px;
+  height: 15px;
+  background: url('close.png') no-repeat center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.close-btn-1:focus {
+  animation: fadeOut 0.5s forwards;
+}
+.close-btn-2:focus{
+  animation: fadeOut 0.5s forwards;
+}
+.close-btn-3:focus{
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+}

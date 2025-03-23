@@ -1,0 +1,67 @@
+/* 🎯 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 📌 General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: rgb(60, 26, 255);
+  color: #fdfddf;
+}
+
+/* 🏠 Header */
+header {
+  background: black;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+  list-style: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+nav ul li a {
+  width: 80px;
+  height: 20px;
+  color: #fdfddf;
+}
+
+nav ul li a{
+  text-decoration: none;
+}
+
+/* nav ul li When Hovered */
+nav ul li a:hover{
+  text-decoration: underline;
+  color: #00d9ff;
+}
+
+
+/* 🔽 Footer */
+footer {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  width: 100px;
+  height: 20px;
+  background: white;
+  margin: auto;
+}
+
+@media(max-width: 760px){
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
